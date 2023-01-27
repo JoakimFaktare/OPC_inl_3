@@ -1,0 +1,66 @@
+﻿@page
+@model testarmersaker.Pages.Players.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PadelPlayers[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PadelPlayers[0].Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PadelPlayers[0].Strengths)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PadelPlayers[0].Position)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PadelPlayers[0].Hand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PadelPlayers[0].Shot)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.PadelPlayers) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Strengths)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Position)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shot)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,58 @@
+﻿@page
+@model testarmersaker.Pages.Players.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PadelPlayers</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PadelPlayers.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PadelPlayers.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PadelPlayers.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PadelPlayers.Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PadelPlayers.Strengths)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PadelPlayers.Strengths)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PadelPlayers.Position)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PadelPlayers.Position)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PadelPlayers.Hand)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PadelPlayers.Hand)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PadelPlayers.Shot)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PadelPlayers.Shot)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="PadelPlayers.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,60 @@
+﻿@page
+@model testarmersaker.Pages.Players.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>PadelPlayers</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PadelPlayers.Id" />
+            <div class="form-group">
+                <label asp-for="PadelPlayers.Name" class="control-label"></label>
+                <input asp-for="PadelPlayers.Name" class="form-control" />
+                <span asp-validation-for="PadelPlayers.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PadelPlayers.Date" class="control-label"></label>
+                <input asp-for="PadelPlayers.Date" class="form-control" />
+                <span asp-validation-for="PadelPlayers.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PadelPlayers.Strengths" class="control-label"></label>
+                <input asp-for="PadelPlayers.Strengths" class="form-control" />
+                <span asp-validation-for="PadelPlayers.Strengths" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PadelPlayers.Position" class="control-label"></label>
+                <input asp-for="PadelPlayers.Position" class="form-control" />
+                <span asp-validation-for="PadelPlayers.Position" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PadelPlayers.Hand" class="control-label"></label>
+                <input asp-for="PadelPlayers.Hand" class="form-control" />
+                <span asp-validation-for="PadelPlayers.Hand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PadelPlayers.Shot" class="control-label"></label>
+                <input asp-for="PadelPlayers.Shot" class="form-control" />
+                <span asp-validation-for="PadelPlayers.Shot" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

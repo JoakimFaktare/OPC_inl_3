@@ -1,0 +1,55 @@
+﻿@page
+@model testarmersaker.Pages.Players.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>PadelPlayers</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PadelPlayers.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PadelPlayers.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PadelPlayers.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PadelPlayers.Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PadelPlayers.Strengths)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PadelPlayers.Strengths)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PadelPlayers.Position)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PadelPlayers.Position)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PadelPlayers.Hand)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PadelPlayers.Hand)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PadelPlayers.Shot)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PadelPlayers.Shot)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.PadelPlayers?.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
